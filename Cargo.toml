@@ -16,13 +16,9 @@ readme = "README.md"
 categories = ["api-bindings", "science"]
 keywords = ["linear-algebra"]
 
-[dependencies]
-libc = "0.2"
-
 [dependencies.num-complex]
 version = "0.2"
 default-features = false
 
 [dependencies.lapack-sys]
-version = "0.12"
-default-features = false
+path = "../../libs/lapack-sys"

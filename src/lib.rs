@@ -26,13 +26,16 @@
 //!
 //! [lapack]: https://en.wikipedia.org/wiki/LAPACK
 //! [usage]: https://blas-lapack-rs.github.io/usage
+#![no_std]
 
 extern crate lapack_sys as ffi;
-extern crate libc;
+// extern crate libc;
 extern crate num_complex as num;
 
-use libc::c_char;
-use std::mem::transmute;
+// use libc::c_char;
+use core::mem::transmute;
+
+pub type c_char = i8;
 
 /// A complex number with 32-bit parts
 #[allow(non_camel_case_types)]
